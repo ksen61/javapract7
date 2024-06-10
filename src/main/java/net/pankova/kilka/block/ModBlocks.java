@@ -38,6 +38,9 @@ public class ModBlocks {
                     .strength(0.6f).sound(SoundType.GRASS).noOcclusion()),
             ModCreativeModeTab.MEDUZA_TAB);
 
+    public static final RegistryObject<Block> CORALCHEST = registryBlock("coralchest",
+            CoralChestBlock::new, ModCreativeModeTab.MEDUZA_TAB);
+
     public static <T extends Block>RegistryObject<T> registryBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturns = BLOCKS.register(name, block);
         registryBlockItem(name, toReturns, tab);
